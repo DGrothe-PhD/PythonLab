@@ -2,6 +2,19 @@
 
 Hangman is a guessing game for two or more players. One player thinks of a word, phrase, or sentence, and the other(s) tries to guess it by suggesting letters or numbers within a certain number of guesses. Originally a paper-and-pencil game, there are now electronic versions.
 
+
+Projekt 1: Hangman
+
+Skapa en version av det klassiska spelet Hangman.
+
+·         Datorn väljer ett slumpmässigt ord från en fördefinierad lista av ord.
+
+·         Spelet visar hur många bokstäver ordet består av, men inte vilka bokstäver som är rätt.
+
+·         Spelaren ska gissa en bokstav i taget, och datorn ger feedback om bokstaven finns i ordet eller inte.
+
+·         Spelet fortsätter tills spelaren har gissat hela ordet eller har gjort tillräckligt många felaktiga gissningar.
+
 ## hangmanSpel.py
 
 **Python version**: 3.11.9
