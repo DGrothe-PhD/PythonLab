@@ -3,7 +3,15 @@ import random
 from PIL import Image, ImageTk  # Use PIL to handle PNG images
 
 # List of words
-word_list = ["python", "hangman", "programming", "developer", "challenge"]
+
+word_list = [
+    "python", "hangman", "programming", "developer", "challenge",
+    "opportunity", "database", "inspiration", "knowledge", "application",
+    "growth", "mindset", "debugging", "exception", "documentation",
+    "learning", "improvement", "dictionary", "translation", "requirement",
+    "building", "geometry", "button", "correct", "compiler", "desktop",
+    "window", "creativity", "feedback", "message", "enhancement"
+]
 
 def load_hangman_image(attempts_left):
     """Load the hangman image based on the number of attempts left."""
