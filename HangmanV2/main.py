@@ -24,7 +24,7 @@ def load_hangman_image(attempts_left):
         "./images/hangman5.png",
         "./images/hangman6.png"   # Full health, 6 attempts left
     ]
-    image_path = image_paths[6 - attempts_left]  # Choose correct image
+    image_path = image_paths[attempts_left]  # Choose correct image
     return Image.open(image_path)
 
 class HangmanGame(tk.Tk):
@@ -50,7 +50,8 @@ class HangmanGame(tk.Tk):
         self.hangman_label.pack()
 
         # Guessed word label with styling
-        self.word_label = tk.Label(self, text=" ".join(self.guessed_word), font=("Courier", 24), bg="#f5f5f5", fg="#007acc")
+        self.word_label = tk.Label(self, text=" ".join(self.guessed_word),
+                                   font=("Courier", 24), bg="#f5f5f5", fg="#007acc")
         self.word_label.pack(pady=20)
 
         # Message label for displaying feedback
@@ -62,7 +63,8 @@ class HangmanGame(tk.Tk):
         self.letters_frame.pack(pady=10)
 
         # Restart button
-        self.restart_button = tk.Button(self, text="Restart Game", font=("Courier", 14), bg="#ffcc00", fg="#333333", command=self.restart_game)
+        self.restart_button = tk.Button(self, text="Restart Game",
+         font=("Courier", 14), bg="#ffcc00", fg="#333333", command=self.restart_game)
         self.restart_button.pack(pady=10)
 
         self.create_letter_buttons()
@@ -71,7 +73,8 @@ class HangmanGame(tk.Tk):
         # Create buttons for each letter A-Z
         for i in range(26):
             letter = chr(65 + i)
-            button = tk.Button(self.letters_frame, text=letter, width=4, height=2, font=("Courier", 14), bg="#007acc", fg="white",
+            button = tk.Button(self.letters_frame, text=letter,
+                               width=4, height=2, font=("Courier", 14), bg="#007acc", fg="white",
                                command=lambda l=letter: self.guess_letter(l.lower()))
             button.grid(row=i // 13, column=i % 13, padx=5, pady=5)
 
